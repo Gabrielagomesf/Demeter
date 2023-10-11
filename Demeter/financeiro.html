@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Financeiro</title>
+    <link rel="stylesheet" href="financeiro.css">
+</head>
+<body>
+    <header>
+        <h1>Controle Financeiro</h1>
+    </header>
+    
+    <section class="despesa-section">
+        <h2>Registro de Despesas</h2>
+        <form id="form-despesa">
+            <label for="data-despesa">Data da Despesa:</label>
+            <input type="date" id="data-despesa" required>
+
+            <label for="valor-despesa">Valor (R$):</label>
+            <input type="number" id="valor-despesa" step="0.01" required>
+
+            <label for="descricao-despesa">Descrição:</label>
+            <input type="text" id="descricao-despesa" required>
+
+            <label for="pago-despesa">Pago:</label>
+            <div id="pago-despesa" class="botao-pago">
+                <button type="button" id="btn-nao-pago">Não Pago</button>
+                <button type="button" id="btn-pago">Pago</button>
+            </div>
+            
+            <label class="anexo-label">Anexar Documento:</label>
+            <input type="file" id="anexo-despesa" accept=".pdf, .doc, .docx">
+            
+            <button type="submit" id="botao-cadastrar-despesa">Cadastrar Despesa</button>
+        </form>
+
+        <div id="lista-despesas">
+            <!-- Lista de despesas será preenchida dinamicamente com JavaScript -->
+        </div>
+    </section>
+    
+    <script src="financeiro.js"></script>
+</body>
+</html>

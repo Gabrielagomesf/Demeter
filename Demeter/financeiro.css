@@ -1,0 +1,172 @@
+/* Estilos gerais */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+/* Estilos para o cabeçalho */
+header {
+    background-color: #2E7D32;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+/* Estilos para a seção de registro de despesas */
+.despesa-section {
+    background-color: #fff;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    max-width: 600px;
+    width: 100%;
+    text-align: center;
+}
+
+/* Estilos para o cabeçalho da seção de registro de despesas */
+.despesa-section h2 {
+    color: #2E7D32;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* Estilos para o formulário de registro de despesas */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+input[type="date"],
+input[type="number"],
+input[type="text"],
+input[type="checkbox"],
+input[type="file"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 16px;
+}
+
+.anexo-label {
+    display: block;
+    font-weight: bold;
+}
+
+input[type="file"] {
+    display: block;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 16px;
+}
+
+.botao-pago {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.botao-pago button {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+#btn-nao-pago {
+    background-color: #FF0000;
+    color: #fff;
+    margin-right: 10px;
+}
+
+#btn-pago {
+    background-color: #2E7D32;
+    color: #fff;
+}
+
+/* Estilos para o botão de "Cadastrar Despesa" */
+#botao-cadastrar-despesa {
+    background-color: #2E7D32;
+    color: #fff;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+    width: 100%;
+}
+
+#botao-cadastrar-despesa:hover {
+    background-color: #228B22;
+}
+
+/* Estilos para a lista de despesas */
+#lista-despesas {
+    list-style: none;
+    padding: 0;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+#lista-despesas li {
+    background-color: #f0f0f0;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+#lista-despesas li:hover {
+    background-color: #e0e0e0;
+}
+
+#lista-despesas .documento {
+    display: none;
+}
+
+#lista-despesas .documento a {
+    display: block;
+    margin-top: 10px;
+    text-decoration: none;
+    color: #2E7D32;
+    font-weight: bold;
+}
+
+#lista-despesas .documento a:hover {
+    text-decoration: underline;
+}
+
+/* Estilos para o botão de "Pago" */
+#btn-pago.active {
+    background-color: #228B22;
+    border: 2px solid #1F7C28;
+}
+
+/* Estilos para o botão de "Não Pago" */
+#btn-nao-pago.active {
+    background-color: #FF3333;
+    border: 2px solid #C73232;
+}

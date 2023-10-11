@@ -1,0 +1,543 @@
+/* Reset de estilos para garantir consistência entre navegadores */
+body, h1, h2, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilos gerais */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+header {
+    background-color: #2E7D32;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #5cb85c;
+}
+
+section {
+    background-color: #fff;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+    text-align: center;
+    background-color: #2E7D32;
+    color: #fff;
+    padding: 10px 0;
+    box-shadow: 0 -3px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos específicos para o agronegócio */
+#inicio {
+    background-image: url('agriculture.jpg'); /* Substitua pelo caminho da sua imagem de fundo */
+    background-size: cover;
+    color: #fff;
+    text-align: center;
+    padding: 100px 0;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+#inicio h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+#sobre h2, #produtos h2, #contato h2 {
+    color: #2E7D32;
+    font-size: 24px;
+    margin-top: 20px;
+}
+
+ul {
+    list-style-type: disc;
+    margin-left: 30px;
+}
+
+address {
+    font-style: normal;
+}
+
+/* Estilizando a lista de produtos */
+#produtos ul {
+    list-style: none;
+}
+
+#produtos ul li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+#produtos ul li::before {
+    content: '\2022'; /* Adiciona um ponto de lista personalizado */
+    font-size: 20px;
+    color: #5cb85c;
+    margin-right: 10px;
+}
+
+/* Estilizando o formulário de contato */
+#contato form {
+    display: flex;
+    flex-direction: column;
+}
+
+#contato form label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+#contato form input[type="text"],
+#contato form input[type="email"],
+#contato form textarea {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 16px;
+}
+
+#contato form input[type="submit"] {
+    background-color: #5cb85c;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+#contato form input[type="submit"]:hover {
+    background-color: #4cae4c;
+}
+
+/* CSS para o modal de chat */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 300px; /* Largura da modal */
+    background-color: #fff;
+    box-shadow: -2px 0 4px rgba(0, 0, 0, 0.2);
+}
+
+.modal-content {
+    padding: 10px;
+}
+
+.close-button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 5px;
+    cursor: pointer;
+}
+
+/* CSS para o chat */
+#chat-modal {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 300px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+}
+
+#chat-modal .modal-content {
+    padding: 10px;
+}
+
+#chat-modal .close-button {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    padding: 5px;
+    cursor: pointer;
+}
+
+#chat-modal h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #2E7D32;
+}
+
+#chat-modal #chat {
+    height: 200px; /* Altura do chat */
+    overflow-y: scroll;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 3px;
+    background-color: #f9f9f9;
+}
+
+#chat-modal #user-input {
+    width: 100%;
+    padding: 5px;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 16px;
+}
+
+#chat-modal #send-button {
+    background-color: #5cb85c;
+    color: #fff;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+}
+
+#chat-modal #send-button:hover {
+    background-color: #4cae4c;
+}
+/* ... (seu CSS anterior) ... */
+
+/* Estilizando mensagens do chat */
+.chat-message {
+    padding: 5px 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+}
+
+.chat-message:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+/* Mensagens do assistente */
+#chat-modal .chat-message:first-child,
+#chat-modal .chat-message:nth-child(odd) {
+    background-color: #e9e9e9;
+}
+
+/* Mensagens do usuário */
+#chat-modal .chat-message:nth-child(even) {
+    background-color: #5cb85c;
+    color: #fff;
+    text-align: right;
+}
+
+/* Estilos para perguntas predefinidas */
+.predefined-questions {
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0;
+}
+
+.predefined-questions .question {
+    padding: 5px;
+    margin: 5px 0;
+    border: none;
+    background-color: #e9e9e9;
+    border-radius: 3px;
+    text-align: left;
+    transition: background-color 0.3s;
+    cursor: pointer;
+}
+
+.predefined-questions .question:hover {
+    background-color: #d8d8d8;
+}
+
+/* Ajustes no botão de envio de mensagem */
+.modal {
+    position: fixed;
+    z-index: 1;
+    right: 20px;
+    bottom: 20px;
+    width: 320px;
+    height: 400px;
+    background-color: #fff;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.chat-header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.chat-header h2 {
+    margin: 0;
+    font-size: 1.2em;
+}
+
+.close-button {
+    font-size: 24px;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.close-button:hover {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+#chat {
+    padding: 90px;
+    overflow-y: auto;
+    height: calc(100% - 60px);  /* 60px is the height of the header */
+}
+
+.chat-message {
+    background-color: #e6e6e6;
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    display: inline-block;
+    max-width: 80%;
+}
+
+.user-message {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    display: inline-block;
+    text-align: right;
+    max-width: 80%;
+}
+
+
+#chat {
+    padding: 20px;
+    overflow-y: auto;
+    height: calc(100% - 60px);  /* 60px é a altura do cabeçalho */
+    display: flex;
+    flex-direction: column;
+}
+
+.chat-message,
+.predefined-question {
+    padding: 10px;
+    border-radius: 8px;
+    margin: 5px 0;
+    max-width: 80%;
+    display: inline-block;
+}
+
+.chat-message.atendente {
+    background-color: #e6e6e6;
+    align-self: flex-start;
+}
+
+.predefined-question {
+    background-color: #4CAF50;
+    color: white;
+    align-self: flex-end;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.predefined-question:hover {
+    background-color: #45a049;
+}
+
+
+/* Estilizando mensagens do chat */
+.chat-message {
+    padding: 5px 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+}
+
+.chat-message.atendente {
+    background-color: #e9e9e9;
+    align-self: flex-start;
+    max-width: 70%; /* ajustar conforme necessário */
+}
+
+.chat-message.user-message {
+    background-color: #5cb85c;
+    color: #fff;
+    align-self: flex-end;
+    text-align: right;
+    max-width: 70%; /* ajustar conforme necessário */
+}
+
+/* Estilos para perguntas predefinidas */
+.predefined-question {
+    background-color: #e9e9e9;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin: 5px 0;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    align-self: flex-start; /* perguntas predefinidas aparecem do lado do assistente */
+    max-width: 70%; /* ajustar conforme necessário */
+}
+
+.predefined-question:hover {
+    background-color: #d8d8d8;
+}
+
+#chat {
+    height: calc(100% - 60px); /* 60px é a altura do cabeçalho */
+    overflow-y: scroll;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Ajustes adicionais para alinhar as mensagens corretamente */
+#chat > * {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start; /* alinhar itens ao início por padrão */
+}
+
+#chat > *:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+#chat .user-message, #chat .predefined-question.user-selected {
+    justify-content: flex-end; /* alinhar itens ao final para mensagens do usuário */
+}
+/* ... (seu CSS anterior) ... */
+
+/* Estilizando o modal de chat com um visual moderno */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 320px; 
+    background: linear-gradient(120deg, #f0f0f0, #ffffff); /* Adicionando gradiente */
+    border-left: 1px solid #ccc;
+}
+
+.modal-content {
+    padding: 20px;
+}
+
+.close-button {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    padding: 5px 10px;
+    background-color: #e9e9e9;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 20px;
+    transition: background-color 0.3s;
+}
+
+.close-button:hover {
+    background-color: #d8d8d8;
+}
+
+#chat-modal {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 320px;
+    z-index: 9999;
+    background: linear-gradient(120deg, #f0f0f0, #ffffff);
+    box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.2);
+    border-top-left-radius: 12px;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+.chat-header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+
+.chat-header h2 {
+    margin: 0;
+    font-size: 1.4em;
+}
+
+#chat {
+    padding: 15px;
+    overflow-y: auto;
+    height: calc(100% - 60px);
+    display: flex;
+    flex-direction: column;
+}
+
+.chat-message,
+.predefined-question {
+    padding: 10px 15px; /* Espaçamento aumentado */
+    border-radius: 15px; /* Bordas arredondadas */
+    margin: 5px 0;
+    max-width: 75%;
+    display: inline-block;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra para dar profundidade */
+}
+
+.chat-message.atendente {
+    background-color: #e9e9e9;
+    align-self: flex-start;
+}
+
+.chat-message.user-message {
+    background-color: #5cb85c;
+    color: #fff;
+    align-self: flex-end;
+}
+
+.predefined-question {
+    background-color: #4CAF50;
+    color: white;
+    align-self: flex-start; 
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.predefined-question:hover {
+    background-color: #45a049;
+}

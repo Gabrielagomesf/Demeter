@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controle de Estoque</title>
+    <link rel="stylesheet" href="estoque.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul class="menu">
+                <li><a href="perfil.html">Perfil</a></li>
+                <li><a href="financeiro.html">Financeiro</a></li>
+            </ul>
+        </nav>
+        <h1>Controle de Estoque</h1>
+    </header>
+
+    <section id="cadastro" class="cadastro">
+        <h2>Cadastrar Novos Produtos</h2>
+        <form id="form-cadastro">
+            <label for="nome-produto">Nome do Produto:</label>
+            <input type="text" id="nome-produto" required>
+
+            <label for="quantidade">Quantidade:</label>
+            <input type="number" id="quantidade" required>
+
+            <label for="valor-unitario">Valor Unitário (R$):</label>
+            <input type="number" id="valor-unitario" required step="0.01">
+
+            <button type="submit">Cadastrar</button>
+        </form>
+    </section>
+
+    <section id="controle" class="controle">
+        <h2>Painel de Controle</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Produto</th>
+                    <th>Quantidade</th>
+                    <th>Valor Unitário (R$)</th>
+                </tr>
+            </thead>
+            <tbody id="lista-produtos">
+                <!-- Produtos serão adicionados aqui dinamicamente com JavaScript -->
+            </tbody>
+        </table>
+    </section>
+
+    <section id="dashboard" class="dashboard">
+        <h2>Dashboard</h2>
+        <button id="botao-gerar-planilha">Gerar Planilha</button>
+        <div id="dashboard-content">
+            <!-- Dados do dashboard e planilha serão exibidos aqui -->
+        </div>
+    </section>
+
+    <script src="estoque.js"></script>
+</body>
+</html>

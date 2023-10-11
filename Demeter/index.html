@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deméter</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Deméter</h1>
+        <nav>
+            <ul>
+                <li><a href="#inicio">Início</a></li>
+                <li><a href="#sobre">Sobre Nós</a></li>
+                <li><a href="#produtos">Produtos</a></li>
+                <li><a href="#contato">Contato</a></li>
+                <li><a href="registro.html">Cadastro</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="inicio">
+        <h2>Bem-vindo ao Deméter</h2>
+        <p>Oferecemos produtos agrícolas de alta qualidade para atender às suas necessidades.</p>
+    </section>
+
+    <section id="sobre">
+        <h2>Sobre Nós</h2>
+        <p>Nossa empresa tem uma longa tradição no agronegócio e estamos comprometidos em fornecer os melhores produtos para nossos clientes.</p>
+    </section>
+
+    <section id="produtos">
+        <h2>Nossos Produtos</h2>
+        <ul>
+            <li>Produtos Agrícolas 1</li>
+            <li>Produtos Agrícolas 2</li>
+            <li>Produtos Agrícolas 3</li>
+        </ul>
+    </section>
+
+    <section id="contato">
+        <h2>Contato</h2>
+        <p>Entre em contato conosco para fazer pedidos ou obter mais informações:</p>
+        <address>
+            Endereço: Rua Exemplo, 123<br>
+            Cidade: Sua Cidade<br>
+            Telefone: (12) 3456-7890<br>
+            Email: exemplo@meuagronegocio.com
+        </address>
+        <button id="open-chat">Abrir Chat</button>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Deméter <p>
+    </footer>
+
+    <!-- Modal de Chat -->
+    <!-- Modal de Chat -->
+    <div id="chat-modal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <div class="chat-header">
+                <h2>Chat de Atendimento</h2>
+                <span class="close-button" id="close-chat">&times;</span>
+        </div>
+        <div id="chat">
+            <!-- Div para exibir as mensagens do chat -->
+            <div class="chat-message atendente">Bem-vindo! Selecione uma das perguntas abaixo:</div>
+            
+            <button class="predefined-question" data-answer="Resposta 1">Desejo saber mais do estoque</button>
+            
+            <button class="predefined-question" data-answer="Resposta 2">Desejo saber mais do controle financeiro</button>
+            
+            <button class="predefined-question" data-answer="Os preços variam de acordo com o produto. Por favor, visite nossa seção de produtos para detalhes.">Desejo saber mais sobre os preços</button>
+            
+            <!-- Div para exibir a resposta após a seleção de uma pergunta -->
+            <div id="chat-response"></div>
+        </div>
+    </div>
+</div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
